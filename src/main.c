@@ -19,6 +19,9 @@ int main(void) {
     // load data into matrix
     load_matrix(matrix, width, height);
 
+    printf("-------------------------------\n");
+    print_matrix(matrix, width, height);
+
 
     // free matrix
     for (int i = 0; i < height; i++) {

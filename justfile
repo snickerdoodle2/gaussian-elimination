@@ -5,7 +5,7 @@ run: build
     ./main
 
 build: clean
-    gcc -o main -fopenmp main.c
+    gcc -o main -fopenmp main.c matrix.c
 
 clean:
     rm -f main

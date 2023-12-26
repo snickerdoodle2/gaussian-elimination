@@ -1,0 +1,14 @@
+watch:
+    watchexec -r -e tex,png -- just build
+
+build: clean
+    latexmk -pdf {{filename}}.tex
+    latexmk -c {{filename}}.tex
+
+build-release out_name: build
+    mv {{filename}}.pdf '{{out_name}}.pdf'
+
+clean:
+    latexmk -c
+    rm -f *.pdf
+filename := "report"

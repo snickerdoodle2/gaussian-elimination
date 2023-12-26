@@ -1,0 +1,36 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper]{geometry}
+\usepackage[parfill, skip=10pt]{parskip}
+
+\usepackage[polish]{babel}
+\usepackage[T1]{fontenc}
+
+%\usepackage{amsmath}
+
+%\usepackage{graphicx}
+%\graphicspath{ {./assets/} }
+
+\begin{document}
+\textbf{Dominik Pilipczuk} \hfill 24.12.2023
+
+\textit{Teoria Wspołbieżności}
+\section{Opis problemu}
+Zadanie domowe polegało na zaimplementowaniu algorytmu eliminacji Gaussa,
+wraz z uwspółbieżnieniem części, która doprowadza do postaci macierzy trójkątnej
+górnej.
+\section{Rozwiązanie}
+Rozwiązanie zostało wykonane z wykorzystaniem języka \texttt{C}
+wraz z biblioteką \texttt{OpenMP}. Opis rozwiązania jest w postaci komentarzy
+w kodzie.
+\subsection{Uruchamianie programu}
+By uruchomić program, należy skompilować kod poleceniem:
+\begin{verbatim}
+   gcc -fopenmp -o main main.c matrix.c 
+\end{verbatim}
+Następnie uruchomić plik \texttt{main} i wkleić macierz do przetworzenia
+(format taki sam jak w treści zadania).
+\section{Komentarz}
+Program działa poprawnie, jednak dla małych macierzy nie widać dobrze efektów
+uwspółbieżnienia. By zobaczyć który wątek wykonuje daną operację, należy zmienić
+wartość definicji \texttt{DEBUG} na \texttt{false} w pliku \texttt{main.c}.
+\end{document}

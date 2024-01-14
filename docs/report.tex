@@ -29,7 +29,32 @@ By uruchomić program, należy skompilować kod poleceniem:
 \end{verbatim}
 Następnie uruchomić plik \texttt{main} i wkleić macierz do przetworzenia
 (format taki sam jak w treści zadania).
+
+\newpage
 \section{Dowód Rozwiązania}
+Algorytm eliminacji Gaussa polega na usuwaniu elementów pod przekątną wiersz
+po wierszu, przez co można go łatwo zrównoleglić. Wystarczy, że dla każdego
+wiersza wykonamy następujące kroki:
+\begin{enumerate}
+    \item Wybór punktu zerowego (elementu na przekątnej)
+    \item Obliczenie współczynnika $\frac{a_{(j+x),j} }{a_{j,j}}$, gdzie j to numer wiersza
+    \item Pomnożenie wiersza przez współczynnik z kroku 2
+    \item Odjęcie wiersza od pozostałych wierszy, tak by w kolumnie punktu
+        zerowego były same zera
+\end{enumerate}
+
+Kroki 3 i 4 można wykonać równolegle dla każdej kolumny, przez co graf zależności
+wygląda tak:
+
+\begin{center}
+    \includegraphics[width=.7\textwidth]{graph.png}
+
+    \textbf{Rysunek 1.} Graf zależności dla macierzy $3$x$3$.
+\end{center}
+
+Gdzie wierzchołek $A$ to krok 1 oraz 2, wierzchołek $B$ to krok 3,
+a wierzchołek $C$ to krok 4. Dla macierzy o większych rozmiarach,
+graf zależności będzie wyglądał podobnie, jednak będzie bardziej rozbudowany.
 \section{Komentarz}
 Program działa poprawnie, jednak dla małych macierzy nie widać dobrze efektów
 uwspółbieżnienia. By zobaczyć który wątek wykonuje daną operację, należy zmienić

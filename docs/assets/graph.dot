@@ -1,0 +1,67 @@
+graph g{
+    A1 -- B11
+    A1 -- B12
+    A1 -- B13
+    A1 -- B14
+    
+    B11 -- C11
+    B12 -- C12
+    B13 -- C13
+    B14 -- C14
+
+    A1[label=<A<SUB>12</SUB>>]
+    B11[label=<B<SUB>1</SUB>>]
+    B12[label=<B<SUB>2</SUB>>]
+    B13[label=<B<SUB>3</SUB>>]
+    B14[label=<B<SUB>4</SUB>>]
+    C11[label=<C<SUB>1</SUB>>]
+    C12[label=<C<SUB>2</SUB>>]
+    C13[label=<C<SUB>3</SUB>>]
+    C14[label=<C<SUB>4</SUB>>]
+    
+    A2 -- B21
+    A2 -- B22
+    A2 -- B23
+    A2 -- B24
+    
+    B21 -- C21
+    B22 -- C22
+    B23 -- C23
+    B24 -- C24
+
+    A2[label=<A<SUB>13</SUB>>]
+    B21[label=<B<SUB>1</SUB>>]
+    B22[label=<B<SUB>2</SUB>>]
+    B23[label=<B<SUB>3</SUB>>]
+    B24[label=<B<SUB>4</SUB>>]
+    C21[label=<C<SUB>1</SUB>>]
+    C22[label=<C<SUB>2</SUB>>]
+    C23[label=<C<SUB>3</SUB>>]
+    C24[label=<C<SUB>4</SUB>>]
+    
+    C12 -- A3
+    C22 -- A3
+    
+    C13 -- B32 [style=dashed constraint=false]
+    C14 -- B33 [style=dashed constraint=false]
+    
+    C23 -- C32 [style=dashed constraint=false]
+    C24 -- C33 [style=dashed constraint=false]
+    
+    A3 -- B31
+    A3 -- B32
+    A3 -- B33
+    
+    B31 -- C31
+    B32 -- C32
+    B33 -- C33
+    
+    
+    A3[label=<A<SUB>23</SUB>>]
+    B31[label=<B<SUB>2</SUB>>]
+    B32[label=<B<SUB>3</SUB>>]
+    B33[label=<B<SUB>4</SUB>>]
+    C31[label=<C<SUB>2</SUB>>]
+    C32[label=<C<SUB>3</SUB>>]
+    C33[label=<C<SUB>4</SUB>>]
+}
